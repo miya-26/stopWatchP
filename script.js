@@ -1,5 +1,6 @@
+let d1
 function clickst(){
-   let d1 = new Date();/*現在の時刻を取得*/
+   d1 = new Date();/*現在の時刻を取得*/
    
    /*テスト用
    console.log(d) //ログに出力
@@ -20,8 +21,9 @@ function clickst(){
    var jikan = document.getElementById('a')
    jikan.innerHTML = YYYY + "年" + MM + "月" + DD + "日" + hh + "時" + mm + "分" + ss + "秒";
 }
+let d2
 function clicksp(){
-   let d2 = new Date();/*現在の時刻を取得*/
+   d2 = new Date();/*現在の時刻を取得*/
 
    var YYYY = d2.getFullYear();
    var MM =d2.getMonth();
@@ -34,10 +36,17 @@ function clicksp(){
    spjikan.innerHTML = YYYY + "年" + MM + "月" + DD + "日" + hh + "時" + mm + "分" + ss + "秒";
 }
 function clicksm(){
-   let d1 = new Date();
-   let d2 = new Date();
+   let keika = d2.getTime() - d1.getTime();
 
-   let keika = d1.getTime() - d2.getTime();
+   document.getElementById('c').textContent = Math.floor(keika/1000) + "秒"
+}
 
-   document.getElementById('c').textContent = keika
+
+//設定画面(JQueryなし)
+const btn = document.getElementById("option") //idは文字列で指定
+const menu = document.getElementById("option-photo")
+
+function clickop(){
+   btn.classList.toggle('active')
+   menu.classList.toggle('menuactive')
 }

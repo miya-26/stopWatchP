@@ -7,9 +7,32 @@ h1{
     text-align: center;
     color: skyblue;
 }
+/*設定ボタン*/
 .option{
-    text-align: right;
+    position: fixed;
+    right: 10px;
+    display: inline-block;
     color: cadetblue;
+    cursor: pointer;
+    border: solid 1px;
+    width: auto;
+}
+.option.active{
+    opacity: 0; /*要素の負透明度*/
+}
+
+/*設定画面右からIN*/
+#option-photo,ul{
+    position: fixed;
+    z-index: 10;
+    transition: all 0.3s;
+    width: 100%;
+    top: 0;
+        right: -120%;
+    background-color: gray;
+}
+#option-photo.menuavtive{
+    right: 0%;
 }
 
 #st, #sp, #sm{
