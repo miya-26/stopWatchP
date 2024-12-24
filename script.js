@@ -39,6 +39,8 @@ function clicksm(){
    let keika = d2.getTime() - d1.getTime();
 
    document.getElementById('c').textContent = Math.floor(keika/1000) + "秒"
+
+   document.getElementById('naka').textContent = "再開" /*idのnakaを再開に変える*/
 }
 
 
