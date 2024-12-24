@@ -3,10 +3,12 @@ body{
     margin: auto;    /*全体的に真ん中になった*/
 }
 
+/*表示確認用
 h1{
     text-align: center;
     color: skyblue;
 }
+*/    
 /*設定ボタン*/
 .option{
     position: fixed;

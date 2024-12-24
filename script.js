@@ -34,8 +34,14 @@ function clicksp(){
 
    var spjikan = document.getElementById('b')
    spjikan.innerHTML = YYYY + "年" + MM + "月" + DD + "日" + hh + "時" + mm + "分" + ss + "秒";
+
+   let keika = d2.getTime() - d1.getTime(); /*開始から終了までの時間*/
+   document.getElementById('c').textContent = Math.floor(keika/1000) + "秒"
+
 }
+let d3
 function clicksm(){
+   
    let keika = d2.getTime() - d1.getTime();
 
    document.getElementById('c').textContent = Math.floor(keika/1000) + "秒"
