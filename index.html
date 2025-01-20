@@ -8,6 +8,7 @@
 
         <link href="style.css" rel="stylesheet">
         <script src="script.js" defer></script> 
+        <script src="photo.js" defer></script> 
 
     </head>
     <body>
@@ -19,6 +20,11 @@
         <div id="option-photo">
             <ul>
                 <li>〇画像を選択してください</li>
+                <input type="file" id="imageInput" accept="image/*">
+                <!-- プレビューエリア -->
+                <div id="preview-container" style="margin-top: 10px; display: none;">
+                    <img id="preview" alt="選択した画像のプレビュー" style="max-width: 100%; max-height: 200px;">
+                </div>
             </ul>
         </div>
         <div>
@@ -37,10 +43,11 @@
 
         <!--休憩時間の表示-->
         <div id = "breaktime">タイムスタンプ</div>
-        休憩中です！再開待ってるね！
-
+        
         <div id = "reStart">タイムスタンプ</div>
-        再開したよ！
+        <!--休憩と再開の時間を計算して、休憩時間をだしたい-->
+
+
         <div id = "rt">　</div>
     </body>
 </html>

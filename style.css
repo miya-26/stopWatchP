@@ -62,6 +62,22 @@ h1{
     font-weight: bold;
     /*display: none; /* 初期非表示 */
 }
+
+#preview-container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 300px;
+    margin-top: 10px;
+}
+#preview {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+}
 /*#breaktime{
     position:fixed;
     top:500px;
