@@ -1,6 +1,7 @@
 body{
     width: 500px;
     margin: auto;    /*全体的に真ん中になった*/
+    background-color: #f0f4f8;
 }
 
 /*表示確認用
@@ -44,11 +45,29 @@ h1{
     padding: 10px;
     margin: 10px;
 }
+#st{
+    margin-top: 100px;
+}
 
 .field{
     display: flex;
     justify-content: space-around;
 }
+
+#breaktime, #reStart {
+    margin-top: 20px;
+    background: peachpuff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    /*display: none; /* 初期非表示 */
+}
+/*#breaktime{
+    position:fixed;
+    top:500px;
+    right:100px
+}
+*/
 
 /*reset*/
 /*一旦

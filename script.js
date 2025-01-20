@@ -37,16 +37,56 @@ function clicksp(){
 
    let keika = d2.getTime() - d1.getTime(); /*開始から終了までの時間*/
    document.getElementById('c').textContent = Math.floor(keika/1000) + "秒"
-
-}
-let d3
-function clicksm(){
    
-   let keika = d2.getTime() - d1.getTime();
+}
 
-   document.getElementById('c').textContent = Math.floor(keika/1000) + "秒"
+let d3;
+let d4;
+let clickCount = 0; //ボタンが押された回数の保持
 
-   document.getElementById('naka').textContent = "再開" /*idのnakaを再開に変える*/
+function clicksm(){
+   clickCount++;
+   
+   if(clickCount === 1){  //1度目休憩ボタン
+      d3 = new Date();
+      var YYYY = d3.getFullYear();
+      var MM =d3.getMonth();
+      var DD = d3.getDate();
+      var hh = d3.getHours();
+      var mm = d3.getMinutes();
+      var ss = d3.getSeconds();
+   
+      var smjikan = document.getElementById('breaktime')
+      smjikan.innerHTML = YYYY + "年" + MM + "月" + DD + "日" + hh + "時" + mm + "分" + ss + "秒";
+      
+      document.getElementById('naka').textContent = "再開" /*idのnakaを再開に変える*/
+   
+   }else if (clickCount === 2){   //2度目再開ボタン
+      d4 = new Date();
+      var YYYY = d4.getFullYear();
+      var MM =d4.getMonth();
+      var DD = d4.getDate();
+      var hh = d4.getHours();
+      var mm = d4.getMinutes();
+      var ss = d4.getSeconds();
+   
+      var saikai = document.getElementById('reStart')
+      saikai.innerHTML = YYYY + "年" + MM + "月" + DD + "日" + hh + "時" + mm + "分" + ss + "秒";
+      document.getElementById('naka').textContent = "休憩"
+
+      let oyasumi = d4.getTime() - d3.getTime();
+      const oyasumiSec = Math.floor(oyasumi/1000) + "秒";
+      const oyasumiHrs = Math.floor(oyasumiSec/3600) + "時間";
+      const oyasumiMin = Math.floor(oyasumiHrs)
+      document.getElementById('rt').textContent
+      
+
+      clickCount = 0; //リセット
+   }
+
+
+
+   
 }
 
 
