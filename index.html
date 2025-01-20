@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ストップウォッチtest</title>
+
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js" defer></script> 
+        <script src="photo.js" defer></script> 
+
+    </head>
+    <body>
+        <!--表示確認用
+        <h1>Hello World!</h1>
+        -->
+        <br>
+        <div id = "option" class="option" onclick="clickop()">⚙️設定</div>
+        <div id="option-photo">
+            <ul>
+                <li>〇画像を選択してください</li>
+                <input type="file" id="imageInput" accept="image/*">
+                <!-- プレビューエリア -->
+                <div id="preview-container" style="margin-top: 10px; display: none;">
+                    <img id="preview" alt="選択した画像のプレビュー" style="max-width: 100%; max-height: 200px;">
+                </div>
+            </ul>
+        </div>
+        <div>
+        <p id ="st">開始時刻：</p>
+        <p id ="a">　</p>
+        <p id ="sp">終了時刻：</p>
+        <p id ="b">　</p>
+        <p id ="sm">勉強時間：</p>
+        <p id ="c">　</p>
+        </div>
+        <div class="field">
+        <button id="hajime" onclick="clickst()/*好きな関数名*/">開始</button> 
+        <button id="naka" onclick="clicksm()">休憩</button>
+        <button id="owari" onclick="clicksp()">終了</button>
+        </div>
+
+        <!--休憩時間の表示-->
+        <div id = "breaktime">タイムスタンプ</div>
+        
+        <div id = "reStart">タイムスタンプ</div>
+        <!--休憩と再開の時間を計算して、休憩時間をだしたい-->
+
+
+        <div id = "rt">　</div>
+    </body>
+</html>
